@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <main class="container">
+      <img
+        src="/assets/images/illustration-sign-up-mobile.svg"
+        class="illustrationMobile"
+      />
+      <div class="content">
+        <div class="text">
+          <h1 class="title">Stay updated!</h1>
+          <p class="subTitle">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+        </div>
+        <ul class="list">
+          <li>Product discovery and building what matters</li>
+          <br />
+          <li>Measuring to ensure updates are a success</li>
+          <br />
+          <li>And much more!</li>
+        </ul>
+        <form action="#" class="form">
+          <div class="labelInp">
+            <labelid class="labelEmail"> Email address</label>
+            <span class="error"></span>
+            <input
+              type="email"
+              id="email"
+              placeholder="email@company.com" 
+            />
+          </div>
+          <button type="submit" class="btn">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+      <img
+        src="/assets/images/illustration-sign-up-desktop.svg"
+        class="illustrationDesktop"
+      />
+    </main>
+    <dialog class="modalWrapper" id="modal">
+      <div>
+        <img src="/assets/images/icon-success.svg" />
+        <h2>Thanks for subscribing!</h2>
+        <p>
+          A confirmation email has been sent to
+          <strong>@loremcompany.com.</strong> Please open it and click the
+          button inside to confirm your subscription.
+        </p>
+      </div>
+      <button class="btn" id="btn">Dismiss message</button>
+    </dialog>
+    
+
+   <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.-->
+    </div>
+  </body>
+  <script src="script/script.js"></script>
+</html>

@@ -1,0 +1,226 @@
+.container {
+  background-color: var(--White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  width: 60rem;
+  transition: 0.3s ease-in-out;
+}
+
+.container.modalOn {
+  display: none;
+  transition: 0.3s ease-in-out;
+}
+
+.container .content {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.container .content .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transition: 0.3s;
+}
+
+.container .content .text .title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: var(--DarkSlateGrey);
+}
+
+.container .content .text .subTitle {
+  font-size: 1.25rem;
+  color: var(--DarkSlateGrey);
+}
+.container .content .list {
+  margin-top: 2rem;
+  list-style-image: url(/assets/images/icon-list.svg);
+  list-style-position: inside;
+}
+
+.container .content .list li {
+  font-size: 1rem;
+  color: var(--DarkSlateGrey);
+  top: 1rem;
+}
+
+.container .content .form {
+  margin-top: 2rem;
+  width: 100%;
+}
+.container .content .form .labelInp {
+  width: 100%;
+  position: relative;
+}
+.container .content .form .labelInp label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--DarkSlateGrey);
+}
+.container .content .form .labelInp input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  background: transparent;
+  border: none;
+  border: 1px solid var(--Grey);
+  margin-top: 0.5rem;
+}
+
+.container .content .form .labelInp input:focus {
+  border: 1px solid var(--DarkSlateGrey);
+}
+
+.container .content .form .btn {
+  margin-top: 1rem;
+  background: transparent;
+  border: none;
+  background-color: var(--CharcoalGrey);
+  border-radius: 0.5rem;
+  color: var(--White);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container .content .form .btn:hover {
+  background-color: var(--Tomato);
+}
+
+.modalWrapper {
+  width: 24rem;
+  background-color: var(--White);
+  border: none;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.modalWrapper.modalOn {
+  display: block;
+  transition: 0.3s ease-in-out;
+}
+
+.modalWrapper h2 {
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--CharcoalGrey);
+}
+
+.modalWrapper p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: var(--CharcoalGrey);
+}
+
+.modalWrapper .btn {
+  margin-top: 1rem;
+  width: 100%;
+  color: var(--White);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem;
+  border: none;
+  background-color: var(--CharcoalGrey);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modalWrapper .btn:hover {
+  background-color: var(--Tomato);
+}
+
+.container .illustrationMobile {
+  display: none;
+}
+
+.error {
+  color: red;
+  font-size: 1rem;
+  position: absolute;
+  right: 1px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    gap: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .container .content {
+    width: 90%;
+  }
+
+  .container .illustrationDesktop {
+    display: none;
+  }
+  .container .illustrationMobile {
+    display: grid;
+    width: 100vw;
+    margin-top: -5.5rem;
+  }
+
+  .container .content .text {
+    display: block;
+    margin-top: -5rem;
+  }
+
+  .container .content .text .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .container .content .text .subTitle {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .container .content .list li {
+    font-size: 1rem;
+  }
+  .container .content .form {
+    margin-top: 2rem;
+  }
+
+  .modalWrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .modalWrapper p {
+    font-size: 1.3rem;
+    line-height: 1.2rem;
+  }
+}
